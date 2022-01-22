@@ -31,10 +31,6 @@ tuned. Additionally, a fail-safe system is written to shut off controls if heart
 use SPI and I2C protocols to read fused euler angles from a BNO055 IMU by first routing the data through an Arduino Nano. These
 values are used to as inputs to the PID loop.
 
-## Member contribution
-
-Matthew was responsible for building the aircraft, hardware, servo driver library, and PID loop. Rohan was responsible for the ground unit, UART protocol and handler, and reading IMU data via the Arduino Nano. Both team members supported each other on all components of the project.
-
 ## References
 
 We used the following external libraries in our project:

@@ -43,19 +43,6 @@ We used the following external libraries in our project:
 - UTILITY/IMUMATHS.H
 - PCA9685.H written by github user lcthums (student modified)
 
-## Self-evaluation
-
-Overall, we delivered on primary goals for this project: to build and test fly a manually controlled RC plane. In addition, we
-accomplished many of our bonus objectives like establishing a PID control loop by reading IMU data. This progress would not have
-been possible without strong collaboration and hours of time spent debugging mission-critical bugs. Here are a few listed below:
-
-- Finding a low-latency, long-range communication system: Before settling on the RFD900 radios, we tried using WiFi with ESP32s
-  and even a developed a LPF to read PWM signals sent directly from a normal RC transmitter. While we got both methods to work,
-  we went with the RFD900s due to their low-latency and higher range resolution.
-- Powering the air system: Powering the numerous air-side modules: the raspberry pi, servo driver and servos, and RFD900, arduino nano, and BNO055 required a large amount of power that our existing ESC's (Electronic speed controller) BEC (battery elimination circuit - a linear step down converter to 5v) was unable to power the aircraft without browning out. We had to use a second BEC and a second battery to ensure the system had adequte power margin to sustain flight if every single servo moved at once.
-- Getting sensor-fused IMU data: We were unable to connect the BNO055 directly to the Pi via I2C since the Pi's I2C hardware does not
-  support clock stretching. We had to include an Arduino Nano intermediary, and write a SPI protocol for communicating between the Pi and Nano.
-
 ## Photos
 
 Check out our photos in the "images" folder. They are from our test flight! We took a video of the flight, but took some screenshots of the video to put up on Github. Contact us if you want more footage! 
